@@ -1,0 +1,25 @@
+name: "CI Check Action"
+description: "Runs linting and tests as a composite action"
+author: "Your Name"
+
+runs:
+  using: "composite"
+  steps:
+       steps:
+       # Get Code
+       - name: Get code
+         uses: actions/checkout@v6
+
+       # Install NodeJS
+       - name: Install NodeJS
+         uses: actions/setup-node@v6
+         with:
+           node-version: 24.x
+
+       # Install Dependencies
+       - name: Install dependencies
+         run: npm ci
+
+      # run test
+       - name: Run tests
+         run: npm test
