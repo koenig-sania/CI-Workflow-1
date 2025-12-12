@@ -1,11 +1,11 @@
 name: "CI Check Action"
 description: "Runs linting and tests as a composite action"
-author: "Your Name"
+author: "Sania"
 
 runs:
   using: "composite"
   steps:
-       steps:
+  
        # Get Code
        - name: Get code
          uses: actions/checkout@v6
